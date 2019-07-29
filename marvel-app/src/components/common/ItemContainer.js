@@ -1,9 +1,8 @@
 import React from "react"
-import ItemImage from "./ItemImage";
-import ItemText from "./ItemText";
+import { ItemImage, ItemText } from "./index"
 
-function ItemContainer() {
-    return(
+const ItemContainer = () => {
+    return (
         <div className="item-container">
             <ItemImage />
             <ItemText />
@@ -11,4 +10,4 @@ function ItemContainer() {
     )
 }
 
-export default ItemContainer
+export { ItemContainer }

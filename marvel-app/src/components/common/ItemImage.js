@@ -1,7 +1,7 @@
 import React from "react";
 
-function ItemImage(props) {
-    return(
+const ItemImage = props => {
+    return (
         <div class="image-container">
             <img
                 src={props.src}
@@ -11,4 +11,4 @@ function ItemImage(props) {
     )
 }
 
-export default ItemImage
+export { ItemImage }
