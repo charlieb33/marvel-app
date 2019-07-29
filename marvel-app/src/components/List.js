@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios"
-import { ItemContainer, ItemImage, ItemText } from "./common"
+import { ItemImage, ItemText } from "./common"
 
 const key = process.env.REACT_APP_DATA_KEY;
 const hash = process.env.REACT_APP_DATA_HASH;
@@ -39,10 +39,13 @@ class List extends Component {
                     thumbnail: { path, extension }
                 } = char
                 return (
-                    <ItemContainer>
+                    <div className="item-container">
                         <ItemImage src={`${path}.${extension}`} />
-                        <ItemText name={name} />
-                    </ItemContainer>
+                        <ItemText
+                            name={name}
+                            description={description}
+                        />
+                    </div>
                 )
             })
         }
