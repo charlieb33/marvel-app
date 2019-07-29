@@ -2,10 +2,10 @@ import React from "react";
 
 const ItemImage = props => {
     return (
-        <div class="image-container">
+        <div className="image-container">
             <img
                 src={props.src}
-                alt="character-image"
+                alt={props.alt}
             />
         </div>
     )

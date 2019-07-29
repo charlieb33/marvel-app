@@ -26,7 +26,6 @@ class List extends Component {
         this.setState({
             characters: results
         })
-        console.log(this.state)
     }
 
     renderItems = () => {
@@ -34,16 +33,24 @@ class List extends Component {
         if (characters) {
             return characters.map(char => {
                 const {
+                    id,
                     name,
                     description,
-                    thumbnail: { path, extension }
+                    thumbnail: { path, extension },
+                    comics: { items }
                 } = char
+                console.log(items[3])
                 return (
-                    <div className="item-container">
-                        <ItemImage src={`${path}.${extension}`} />
+                    <div className="item-container" key={id}>
+                        <ItemImage
+                            src={`${path}.${extension}`}
+                            alt={`character-image`}
+                        />
                         <ItemText
                             name={name}
-                            description={description}
+                            description={description ? description : "Description Unavailable"}
+                            comic1={items[0].name}
+                            comic2={items[7].name}
                         />
                     </div>
                 )
