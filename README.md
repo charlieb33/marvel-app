@@ -1,7 +1,7 @@
 # Marvel Roster
 
 ### About the App
-* Browse through a list of Marvel's characters/comics/movies both on desktop and mobile. The user would use the dropdown bar to browse a more specific categort/The user would use the search bar if there is something more specific they would like to find. The user would click the like button on the main list to add the list item to the favorites list, and click the unlike button on the Favorites list if they wish to remove it.
+* Browse through a list of Marvel's characters both on desktop and mobile. The user would use the dropdown bar to browse a more specific category/The user would use the search bar if there is something more specific they would like to find. The user would click the like button on the main list to add the list item to the favorites list, and click the unlike button on the Favorites list if they wish to remove it.
 
 ### Wireframes
 * ![IMG_9711](https://user-images.githubusercontent.com/44616151/62046039-f306c100-b1d4-11e9-9fff-096d22a7ca3c.jpg)
@@ -11,7 +11,7 @@
 1. App component
 2. Header component
 3. Title
-4. Navbar with links
+4. Search bar/Dropdown menu
 5. Main list title
 6. List component
 7. Item component
@@ -29,7 +29,7 @@
 19. Favorites list container
 
 ### MVP
-* An app that collects data on character/comics/movie from a Marvel database, and displays it on screen. Also, does at least one of the following:
+* An app that collects data on characters from a Marvel database, and displays it on screen. Also, does at least one of the following:
 1. Use a dropdown menu to display more specific categories of characters/comics/movies
 2. Use a search bar to find specific text in the description of a character/comic/movie found in the database
 3. Use like buttons to add the articles to a favorites list, and unlike buttons to remove them from the favorites list
