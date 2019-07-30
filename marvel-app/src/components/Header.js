@@ -6,7 +6,7 @@ const Header = props => {
     return (
         <header className="header-container">
             <h1>Marvel Roster</h1>
-            <DataFilter onFilter={props.onFilter} />
+            <DataFilter onChange={props.onChange} />
         </header>
     )
 }

@@ -31,7 +31,7 @@ class App extends Component {
     })
   }
 
-  onFilter = event => {
+  onChange = event => {
     console.log(event)
   }
 
@@ -41,7 +41,7 @@ class App extends Component {
         <Header
           list={List}
           filterValue={this.filterValue}
-          onFilter={this.onFilter}
+          onChange={this.onChange}
         />
         <List
           characters={this.state.characters}
