@@ -9,7 +9,7 @@ const DataFilter = props => {
         <input
             type="text"
             value={props.value}
-            onFilter={props.onFilter}
+            onChange={props.onChange}
             name="char-search"
         />
     </div>

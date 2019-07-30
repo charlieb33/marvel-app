@@ -9,11 +9,11 @@ const hash = process.env.REACT_APP_DATA_HASH;
 const timestamp = process.env.REACT_APP_DATA_TIMESTAMP;
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       characters: [],
-      filterValue: "",
+      filterValue: ""
     }
   }
 
@@ -22,7 +22,8 @@ class App extends Component {
   }
   
   fetchData = async () => {
-    const url = `https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=10&ts=${timestamp}&apikey=${key}&hash=${hash}`;
+    const url =
+      `https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=10&ts=${timestamp}&apikey=${key}&hash=${hash}`;
     const response = await axios.get(url);
     const { data: { data: { results } } } = response
     this.setState({
@@ -31,18 +32,24 @@ class App extends Component {
     })
   }
 
-  onChange = event => {
-    console.log(event)
+  handleChange = (event) => {
+    event.preventDefault()
+    const input = event.target.value
+    // this.setState(() => {
+    //   const filteredList = this.state.characters.name.filter(name => {
+    //     return name.toLowerCase().includes(input.toLowerCase())})
+    // })
   }
+  
 
   render() {
     return (
       <div className="app-container">
         <Header
-          list={List}
-          filterValue={this.filterValue}
-          onChange={this.onChange}
-        />
+            list={List}
+            filterValue={this.state}
+            onChange={this.handleChange}
+          />
         <List
           characters={this.state.characters}
         />
