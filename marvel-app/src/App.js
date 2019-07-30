@@ -12,7 +12,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      characters: []
+      characters: [],
+      filterValue: "",
     }
   }
 
@@ -25,15 +26,26 @@ class App extends Component {
     const response = await axios.get(url);
     const { data: { data: { results } } } = response
     this.setState({
-      characters: results
+      characters: results,
+      filterValue: ""
     })
+  }
+
+  onFilter = event => {
+    console.log(event)
   }
 
   render() {
     return (
       <div className="app-container">
-        <Header />
-        <List characters={this.state.characters}/>
+        <Header
+          list={List}
+          filterValue={this.filterValue}
+          onFilter={this.onFilter}
+        />
+        <List
+          characters={this.state.characters}
+        />
       </div>
     )
   }

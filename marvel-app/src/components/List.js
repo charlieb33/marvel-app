@@ -32,7 +32,7 @@ const List = props => {
 
     return (
         <div>
-            {props.displayContent}
+            {props.characters}
         </div>
     )
 }

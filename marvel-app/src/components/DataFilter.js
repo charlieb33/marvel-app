@@ -1,15 +1,19 @@
 import React from "react"
 
 const DataFilter = props => {
-    <div>
-        <label>Search: </label>
+    return(
+        <div>
+        <label htmlFor="char-search">
+            Search: 
+        </label>
         <input
             type="text"
             value={props.value}
-            onChange={props.onChange}
-            placeholder="Name/Description/Comics"
+            onFilter={props.onFilter}
+            name="char-search"
         />
     </div>
+    )
 }
 
 export default DataFilter
