@@ -1,0 +1,8 @@
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    height: 35vh;
+    width: 20vw;
+}

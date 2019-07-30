@@ -1,4 +1,5 @@
 import React from "react"
+import "./ItemText.css"
 
 const ItemText = props => {
     return (

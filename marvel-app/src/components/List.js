@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios"
 import { ItemImage, ItemText } from "./common"
+import "./List.css"
 
 const key = process.env.REACT_APP_DATA_KEY;
 const hash = process.env.REACT_APP_DATA_HASH;
