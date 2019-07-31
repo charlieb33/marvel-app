@@ -7,11 +7,11 @@ const key = process.env.REACT_APP_DATA_KEY;
 const hash = process.env.REACT_APP_DATA_HASH;
 const timestamp = process.env.REACT_APP_DATA_TIMESTAMP;
 
-class CharacterList extends Component {
+class EventList extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          characters: [],
+          events: [],
         }
     }
     
@@ -20,37 +20,35 @@ class CharacterList extends Component {
     }
       
     fetchData = async () => {
-        const url =
-          `https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=10&ts=${timestamp}&apikey=${key}&hash=${hash}`;
+        const url = `https://gateway.marvel.com:443/v1/public/events?orderBy=-modified&limit=10&ts=${timestamp}&apikey=${key}&hash=${hash}`;
         const response = await axios.get(url);
+        console.log(response)
         const { data: { data: { results } } } = response
+        console.log(results)
         this.setState({
-          characters: results,
+          events: results,
         })
     }
 
     renderItems = () => {
-        const { characters } = this.state
-        if (characters) {
-            return characters.map(char => {
+        const { events } = this.state
+        if (events) {
+            return events.map(event => {
                 const {
                     id,
-                    name,
+                    title,
                     description,
                     thumbnail: { path, extension },
-                    comics: { items }
-                } = char
+                } = event
                 return (
                     <div className="item-container" key={id}>
                         <ItemImage
                             src={`${path}.${extension}`}
-                            alt={`character-image`}
+                            alt={`event-image`}
                         />
                         <ItemText
-                            name={name}
-                            description={description ? description : "Description Unavailable"}
-                            item1={items[0].name}
-                            item2={items[7].name}
+                            title={title}
+                            description={description}
                         />
                     </div>
                 )
@@ -67,4 +65,4 @@ class CharacterList extends Component {
     }
 }
 
-export default CharacterList
+export default EventList

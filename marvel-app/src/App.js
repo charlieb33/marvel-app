@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import CharacterList from "./components/CharacterList"
+// import EventList from "./components/List"
 import "./App.css";
 
 class App extends Component {
@@ -42,7 +43,10 @@ class App extends Component {
             filterValue={this.state}
             onChange={this.handleSearchChange}
             // onChange={this.handleDropdownChange}
-          />
+        />
+        <nav>
+          
+        </nav>
         <CharacterList />
       </div>
     )

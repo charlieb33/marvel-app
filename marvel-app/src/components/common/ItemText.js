@@ -8,8 +8,8 @@ const ItemText = props => {
             <p>{props.description}</p>
             <p>Comics</p>
             <ul>
-                <li>{props.comic1}</li>
-                <li>{props.comic2}</li>
+                <li>{props.item1}</li>
+                <li>{props.item2}</li>
             </ul>
         </div>
     )
