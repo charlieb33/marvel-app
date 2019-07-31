@@ -32,13 +32,12 @@ class App extends Component {
     })
   }
 
-  handleChange = (event) => {
+  handleSearchChange = event => {
     event.preventDefault()
     const input = event.target.value
 
     const filteredList = this.state.characters.filter(char => {
-      console.log(char)
-      if(char.name.toLowerCase().includes(input.toLowerCase())){
+      if (char.name.toLowerCase().includes(input.toLowerCase())){
         return char
       }
     })
@@ -56,6 +55,13 @@ class App extends Component {
     // })
   }
   
+  handleDropdownChange = event => {
+    event.preventDefault()
+    const { value } = event.target
+    this.setState({
+      characters:  value
+    })
+  }
 
   render() {
     return (
@@ -63,7 +69,7 @@ class App extends Component {
         <Header
             list={List}
             filterValue={this.state}
-            onChange={this.handleChange}
+            onChange={this.handleSearchChange}
           />
         <List
           characters={this.state.characters}
