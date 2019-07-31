@@ -35,6 +35,21 @@ class App extends Component {
   handleChange = (event) => {
     event.preventDefault()
     const input = event.target.value
+
+    const filteredList = this.state.characters.filter(char => {
+      console.log(char)
+      if(char.name.toLowerCase().includes(input.toLowerCase())){
+        return char
+      }
+    })
+    if (input.length < 1){
+      this.fetchData()
+    } else {
+      this.setState({
+        characters: filteredList
+      })
+    }
+    
     // this.setState(() => {
     //   const filteredList = this.state.characters.name.filter(name => {
     //     return name.toLowerCase().includes(input.toLowerCase())})
