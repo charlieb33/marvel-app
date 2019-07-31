@@ -3,10 +3,6 @@ import axios from "axios";
 import { ItemImage, ItemText } from "./common";
 import "./List.css"
 
-const key = process.env.REACT_APP_DATA_KEY;
-const hash = process.env.REACT_APP_DATA_HASH;
-const timestamp = process.env.REACT_APP_DATA_TIMESTAMP;
-
 class EventList extends Component {
     constructor(props) {
         super(props)
@@ -20,7 +16,8 @@ class EventList extends Component {
     }
       
     fetchData = async () => {
-        const url = `https://gateway.marvel.com:443/v1/public/events?orderBy=-modified&limit=10&ts=${timestamp}&apikey=${key}&hash=${hash}`;
+        const url =
+            `https://gateway.marvel.com:443/v1/public/events?orderBy=-modified&limit=10&ts=${this.props.timestamp}&apikey=${this.props.key}&hash=${this.props.hash}`;
         const response = await axios.get(url);
         console.log(response)
         const { data: { data: { results } } } = response

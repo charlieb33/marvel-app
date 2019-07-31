@@ -3,10 +3,6 @@ import axios from "axios";
 import { ItemImage, ItemText } from "./common";
 import "./List.css"
 
-const key = process.env.REACT_APP_DATA_KEY;
-const hash = process.env.REACT_APP_DATA_HASH;
-const timestamp = process.env.REACT_APP_DATA_TIMESTAMP;
-
 class CharacterList extends Component {
     constructor(props) {
         super(props)
@@ -21,7 +17,7 @@ class CharacterList extends Component {
       
     fetchData = async () => {
         const url =
-          `https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=10&ts=${timestamp}&apikey=${key}&hash=${hash}`;
+          `https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=10&ts=${this.props.timestamp}&apikey=${this.props.key}&hash=${this.props.hash}`;
         const response = await axios.get(url);
         const { data: { data: { results } } } = response
         this.setState({
@@ -51,6 +47,8 @@ class CharacterList extends Component {
                             description={description ? description : "Description Unavailable"}
                             item1={items[0].name}
                             item2={items[7].name}
+                            name="Hello World"
+                            description="Test"
                         />
                     </div>
                 )

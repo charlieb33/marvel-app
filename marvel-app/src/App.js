@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import CharacterList from "./components/CharacterList"
-// import EventList from "./components/List"
+import EventList from "./components/EventList"
+import { Link, Route } from "react-router-dom"
 import "./App.css";
+
+const key = process.env.REACT_APP_DATA_KEY;
+const hash = process.env.REACT_APP_DATA_HASH;
+const timestamp = process.env.REACT_APP_DATA_TIMESTAMP;
 
 class App extends Component {
   handleSearchChange = event => {
@@ -45,9 +50,25 @@ class App extends Component {
             // onChange={this.handleDropdownChange}
         />
         <nav>
-          
+          <Route path="/characters/" component={(props) =>
+              <CharacterList
+                {...props}
+                timestamp={timestamp}
+                key={key}
+                hash={hash}
+              />}
+            />
+            <Route path="/events/" component={(props) =>
+              <EventList
+                {...props}
+                timestamp={timestamp}
+                key={key}
+                hash={hash}
+              />}
+            />
+          <Link to="/characters/">Characters</Link>
+          <Link to="/events/">Events</Link>
         </nav>
-        <CharacterList />
       </div>
     )
   }
