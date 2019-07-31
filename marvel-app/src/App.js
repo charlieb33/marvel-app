@@ -70,6 +70,7 @@ class App extends Component {
             list={List}
             filterValue={this.state}
             onChange={this.handleSearchChange}
+            // onChange={this.handleDropdownChange}
           />
         <List
           characters={this.state.characters}
