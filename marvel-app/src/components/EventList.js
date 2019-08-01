@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios";
-import { ItemImage, ItemText } from "./common";
+import { ItemImage, EventText } from "./common";
 import "./List.css"
 
 class EventList extends Component {
@@ -43,7 +43,7 @@ class EventList extends Component {
                             src={`${path}.${extension}`}
                             alt={`event-image`}
                         />
-                        <ItemText
+                        <EventText
                             title={title}
                             description={description}
                         />

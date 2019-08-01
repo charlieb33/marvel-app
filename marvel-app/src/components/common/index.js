@@ -1,2 +1,3 @@
 export * from "./ItemImage"
-export * from "./ItemText"
+export * from "./CharText"
+export * from "./EventText"

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios";
-import { ItemImage, ItemText } from "./common";
+import { ItemImage, CharText } from "./common";
 import "./List.css"
 
 class CharacterList extends Component {
@@ -42,11 +42,11 @@ class CharacterList extends Component {
                             src={`${path}.${extension}`}
                             alt={`character-image`}
                         />
-                        <ItemText
+                        <CharText
                             name={name}
                             description={description ? description : "Description Unavailable"}
-                            item1={items[0].name}
-                            item2={items[7].name}
+                            comic1={items[0].name}
+                            comic2={items[7].name}
                         />
                     </div>
                 )
