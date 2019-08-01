@@ -36,6 +36,7 @@ class EventList extends Component {
                     title,
                     description,
                     thumbnail: { path, extension },
+                    creators: { items }
                 } = event
                 return (
                     <div className="item-container" key={id}>

@@ -6,11 +6,6 @@ const EventText = props => {
         <div className="text-container">
             <h4>{props.title}</h4>
             <p>{props.description}</p>
-            <p>Comics</p>
-            <ul>
-                <li>{props.comic1}</li>
-                <li>{props.comic2}</li>
-            </ul>
         </div>
     )
 }

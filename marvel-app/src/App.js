@@ -32,14 +32,6 @@ class App extends Component {
     //     return name.toLowerCase().includes(input.toLowerCase())})
     // })
   }
-  
-  handleDropdownChange = event => {
-    event.preventDefault()
-    const { value } = event.target
-    this.setState({
-      characters:  value
-    })
-  }
 
   render() {
     return (
