@@ -26,11 +26,6 @@ class App extends Component {
           characters: filteredList
         })
     }
-    
-    // this.setState(() => {
-    //   const filteredList = this.state.characters.name.filter(name => {
-    //     return name.toLowerCase().includes(input.toLowerCase())})
-    // })
   }
 
   render() {
@@ -39,12 +34,14 @@ class App extends Component {
         <Header
             filterValue={this.state}
             onChange={this.handleSearchChange}
-            // onChange={this.handleDropdownChange}
         />
-        <nav>
-          <Link to="/characters/">Characters</Link>
-          <Link to="/events/">Events</Link>
-          <Route path="/characters/" component={(props) =>
+        <div>
+          <nav className="nav-container">
+            <Link to="/characters/">Characters</Link>
+            <Link to="/events/">Events</Link>
+          </nav>
+          <main>
+            <Route path="/characters/" component={(props) =>
               <CharacterList
                 {...props}
                 timestamp={timestamp}
@@ -60,7 +57,8 @@ class App extends Component {
                 hash={hash}
               />}
             />
-        </nav>
+          </main>
+        </div>
       </div>
     )
   }
