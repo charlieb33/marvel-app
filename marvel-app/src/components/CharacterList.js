@@ -17,7 +17,7 @@ class CharacterList extends Component {
       
     fetchData = async () => {
         const url =
-          `https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=10&ts=${this.props.timestamp}&apikey=${this.props.key}&hash=${this.props.hash}`;
+          `https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=10&ts=${this.props.timestamp}&apikey=${this.props.apiKey}&hash=${this.props.hash}`;
         const response = await axios.get(url);
         const { data: { data: { results } } } = response
         this.setState({
@@ -47,8 +47,6 @@ class CharacterList extends Component {
                             description={description ? description : "Description Unavailable"}
                             item1={items[0].name}
                             item2={items[7].name}
-                            name="Hello World"
-                            description="Test"
                         />
                     </div>
                 )

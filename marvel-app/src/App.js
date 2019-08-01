@@ -5,7 +5,7 @@ import EventList from "./components/EventList"
 import { Link, Route } from "react-router-dom"
 import "./App.css";
 
-const key = process.env.REACT_APP_DATA_KEY;
+const apiKey = process.env.REACT_APP_DATA_KEY;
 const hash = process.env.REACT_APP_DATA_HASH;
 const timestamp = process.env.REACT_APP_DATA_TIMESTAMP;
 
@@ -50,11 +50,13 @@ class App extends Component {
             // onChange={this.handleDropdownChange}
         />
         <nav>
+          <Link to="/characters/">Characters</Link>
+          <Link to="/events/">Events</Link>
           <Route path="/characters/" component={(props) =>
               <CharacterList
                 {...props}
                 timestamp={timestamp}
-                key={key}
+                apiKey={apiKey}
                 hash={hash}
               />}
             />
@@ -62,12 +64,10 @@ class App extends Component {
               <EventList
                 {...props}
                 timestamp={timestamp}
-                key={key}
+                apiKey={apiKey}
                 hash={hash}
               />}
             />
-          <Link to="/characters/">Characters</Link>
-          <Link to="/events/">Events</Link>
         </nav>
       </div>
     )
