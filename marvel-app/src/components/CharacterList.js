@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import DataFilter from "./DataFilter"
 import axios from "axios";
 import { ItemImage, CharText } from "./common";
 import "./List.css"
@@ -23,6 +24,24 @@ class CharacterList extends Component {
         this.setState({
           characters: results,
         })
+    }
+
+    handleSearchChange = event => {
+        event.preventDefault()
+        const input = event.target.value
+    
+        const filteredList = this.state.characters.filter(char => {
+          if (char.name.toLowerCase().includes(input.toLowerCase())){
+            return char
+          }
+          })
+          if (input.length < 1){
+            this.fetchData()
+          } else {
+            this.setState({
+              characters: filteredList
+            })
+        }
     }
 
     renderItems = () => {
@@ -58,6 +77,10 @@ class CharacterList extends Component {
         return (
             <div>
                 <h3 className="section-heading">Characters</h3>
+                <DataFilter
+                    onChange={this.handleSearchChange}
+                    placeholder="Name"
+                />
                 {this.renderItems()}
             </div>
         )

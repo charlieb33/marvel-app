@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import DataFilter from "./DataFilter"
 import axios from "axios";
 import { ItemImage, EventText } from "./common";
 import "./List.css"
@@ -51,10 +52,29 @@ class EventList extends Component {
         }
     }
 
+    handleSearchChange = event => {
+        event.preventDefault()
+        const input = event.target.value
+    
+        const filteredList = this.state.events.filter(evt => {
+          if (evt.title.toLowerCase().includes(input.toLowerCase())){
+            return evt
+          }
+          })
+          if (input.length < 1){
+            this.fetchData()
+          } else {
+            this.setState({
+              events: filteredList
+            })
+        }
+    }
+
     render() {
         return (
             <div>
                 <h3 className="section-heading">Events</h3>
+                <DataFilter onChange={this.handleSearchChange} placeholder="Title" />
                 {this.renderItems()}
             </div>
         )

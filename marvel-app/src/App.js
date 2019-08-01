@@ -10,24 +10,6 @@ const hash = process.env.REACT_APP_DATA_HASH;
 const timestamp = process.env.REACT_APP_DATA_TIMESTAMP;
 
 class App extends Component {
-  handleSearchChange = event => {
-    event.preventDefault()
-    const input = event.target.value
-
-    const filteredList = this.state.characters.filter(char => {
-      if (char.name.toLowerCase().includes(input.toLowerCase())){
-        return char
-      }
-      })
-      if (input.length < 1){
-        this.fetchData()
-      } else {
-        this.setState({
-          characters: filteredList
-        })
-    }
-  }
-
   render() {
     return (
       <div className="app-container">
