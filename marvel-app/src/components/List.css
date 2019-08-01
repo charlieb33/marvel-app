@@ -7,3 +7,10 @@
     background-color: white;
     margin: 10px 0;
 }
+
+.section-heading {
+    background-color: aqua;
+    text-align: center;
+    width: auto;
+    font-size: 25px;
+}

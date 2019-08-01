@@ -11,7 +11,7 @@ html {
     align-items: center;
 }
 
-.nav-container{
+.nav-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,6 +19,13 @@ html {
     background-color: lightblue;
     margin: 10px 0;
     height: 8vh;
-    width: 35vw;
+    width: auto;
     font-size: 20px;
+}
+
+.headline {
+    background-color: cadetblue;
+    width: auto;
+    padding: 18px;
+    text-decoration: underline;
 }

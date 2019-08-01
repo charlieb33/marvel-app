@@ -35,6 +35,9 @@ class App extends Component {
             filterValue={this.state}
             onChange={this.handleSearchChange}
         />
+        <h2 className="headline">
+          CHECK OUT THE MOST UP-TO-DATE INFO ON MARVEL'S CHARACTERS AND EVENTS
+        </h2>
         <div>
           <nav className="nav-container">
             <Link to="/characters/">Characters</Link>

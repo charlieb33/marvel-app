@@ -57,6 +57,7 @@ class CharacterList extends Component {
     render() {
         return (
             <div>
+                <h3 className="section-heading">Characters</h3>
                 {this.renderItems()}
             </div>
         )

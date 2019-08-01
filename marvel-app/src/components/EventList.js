@@ -54,6 +54,7 @@ class EventList extends Component {
     render() {
         return (
             <div>
+                <h3 className="section-heading">Events</h3>
                 {this.renderItems()}
             </div>
         )
