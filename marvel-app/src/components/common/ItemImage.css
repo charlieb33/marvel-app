@@ -8,3 +8,10 @@
     height: 290px;
     width: 270px;
 }
+
+@media only screen and (max-width: 375px) {
+    .image-container img {
+       height: 200px;
+       width: 130px;
+    }
+}

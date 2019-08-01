@@ -3,6 +3,8 @@
 .item-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 35vh;
     width: 70vw;
     border: 5px solid black;
@@ -28,4 +30,19 @@
     font-size: 33px;
     margin: 0;
     padding: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+    .section-heading {
+        width: 60vw;
+    }
+
+    .section-heading h3 {
+        font-size: 27px;
+    }
+
+    .item-container {
+        width: 80vw;
+        height: 50vh;
+    }
 }

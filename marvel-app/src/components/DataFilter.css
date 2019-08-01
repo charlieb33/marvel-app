@@ -5,3 +5,13 @@
 .filter-container input {
     font-size: 18px;
 }
+
+@media only screen and (max-width: 375px) {
+    .filter-container {
+        font-size: 20px;
+    }
+
+    .filter-container input {
+        font-size: 14px;
+    }
+}
