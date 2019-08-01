@@ -61,10 +61,10 @@ class EventList extends Component {
             return evt
           }
           })
-          if (input.length < 1){
+          if (input.length < 1) {
             this.fetchData()
           } else {
-            this.setState({
+            this.setState( {
               events: filteredList
             })
         }

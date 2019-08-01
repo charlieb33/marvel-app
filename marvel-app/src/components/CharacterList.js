@@ -42,6 +42,7 @@ class CharacterList extends Component {
               characters: filteredList
             })
         }
+        return;
     }
 
     renderItems = () => {

@@ -22,11 +22,12 @@ class App extends Component {
         </h2>
         <div>
           <nav className="nav-container">
+            <Link to="/">Home</Link>
             <Link to="/characters/">Characters</Link>
             <Link to="/events/">Events</Link>
           </nav>
           <main>
-            <Route path="/characters/" component={(props) =>
+            <Route path="/characters/" component={ props =>
               <CharacterList
                 {...props}
                 timestamp={timestamp}
@@ -34,7 +35,7 @@ class App extends Component {
                 hash={hash}
               />}
             />
-            <Route path="/events/" component={(props) =>
+            <Route path="/events/" component={ props =>
               <EventList
                 {...props}
                 timestamp={timestamp}
