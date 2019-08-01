@@ -73,8 +73,10 @@ class EventList extends Component {
     render() {
         return (
             <div>
-                <h3 className="section-heading">Events</h3>
-                <DataFilter onChange={this.handleSearchChange} placeholder="Title" />
+                <div className="section-heading">
+                    <h3>Events</h3>
+                    <DataFilter onChange={this.handleSearchChange} placeholder="Title" />
+                </div>
                 {this.renderItems()}
             </div>
         )

@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
 .header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    border: 5px solid black;
-    background-color: red;
+    font-family: 'Russo One', sans-serif;
+    border: 5px solid #000;
+    background-color: #FF0000;
+    color: white;
+    font-size: 25px;
 }

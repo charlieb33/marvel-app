@@ -1,8 +1,10 @@
 .image-container {
     display: flex;
+    align-items: center;
+    margin: 10px;
 }
 
 .image-container img {
-    height: 35vh;
-    width: 20vw;
+    height: 290px;
+    width: 270px;
 }

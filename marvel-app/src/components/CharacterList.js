@@ -76,11 +76,13 @@ class CharacterList extends Component {
     render() {
         return (
             <div>
-                <h3 className="section-heading">Characters</h3>
-                <DataFilter
-                    onChange={this.handleSearchChange}
-                    placeholder="Name"
-                />
+                <div className="section-heading">
+                    <h3>Characters</h3>
+                    <DataFilter
+                        onChange={this.handleSearchChange}
+                        placeholder="Name"
+                    />
+                </div>
                 {this.renderItems()}
             </div>
         )

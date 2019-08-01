@@ -6,7 +6,7 @@ const CharText = props => {
         <div className="text-container">
             <h4>{props.name}</h4>
             <p>{props.description}</p>
-            <p>Comics</p>
+            <h4>Comics</h4>
             <ul>
                 <li>{props.comic1}</li>
                 <li>{props.comic2}</li>

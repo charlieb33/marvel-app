@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Teko|Titillium+Web&display=swap');
+
 html {
     background: url("https://cdn.flickeringmyth.com/wp-content/uploads/2019/07/Marvel-Birthday_final-1-600x935.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .app-container {
@@ -11,21 +11,29 @@ html {
     align-items: center;
 }
 
+.headline {
+    background-color: #006100;
+    color: #FFF;
+    width: auto;
+    padding: 18px;
+    text-decoration: underline;
+    border-radius: 15px;
+    margin: 15px auto;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    background-color: lightblue;
-    margin: 10px 0;
+    justify-content: space-evenly;
+    background-color: #FFF;
+    margin: 0 auto;
     height: 8vh;
-    width: auto;
+    width: 25vw;
+    text-decoration: none;
+    border-radius: 15px;
     font-size: 20px;
-}
-
-.headline {
-    background-color: cadetblue;
-    width: auto;
-    padding: 18px;
-    text-decoration: underline;
+    font-family: 'Titillium Web', sans-serif;
 }

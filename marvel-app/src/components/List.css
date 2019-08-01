@@ -1,16 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+
 .item-container {
     display: flex;
     flex-direction: row;
     height: 35vh;
-    width: 80vw;
-    border: 5px solid blue;
-    background-color: white;
+    width: 70vw;
+    border: 5px solid black;
+    background-color: #BEA6A0;
     margin: 10px 0;
+    border-radius: 15px;
 }
 
 .section-heading {
-    background-color: aqua;
-    text-align: center;
-    width: auto;
-    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #009700;
+    color: #000;
+    width: 25vw;
+    border-radius: 15px;
+    margin: 10px auto;
+    font-family: 'Teko', sans-serif;
+}
+
+.section-heading h3 {
+    font-size: 33px;
+    margin: 0;
+    padding: 10px;
 }

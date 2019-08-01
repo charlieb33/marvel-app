@@ -4,7 +4,7 @@ import "./Header.css"
 const Header = () => {
     return (
         <header className="header-container">
-            <h1>Marvel Roster</h1>
+            <h1>MARVEL ROSTER</h1>
         </header>
     )
 }

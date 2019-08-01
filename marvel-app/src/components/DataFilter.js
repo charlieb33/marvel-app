@@ -1,8 +1,9 @@
 import React from "react"
+import "./DataFilter.css"
 
 const DataFilter = props => {
-    return(
-        <div>
+    return (
+        <div className="filter-container">
             <label htmlFor="search">
                 Search: 
             </label>
