@@ -1,4 +1,4 @@
-# Marvel Roster
+# Marvel App
 
 ### About the App
 * Browse through a list of Marvel's the ten most recently updated characters and events from the comics and stories, both on desktop and mobile. The page for characters would display the characters' names, descriptions (if available), and two of their comics. The page for events would display the events' titles and descriptions. The user would use the search bar if there is something a specific character name or event title they would like to find. The user would use the links in the navigation bar to switch between the home page, the page with the characters' data, and the page with the events' data.
